@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Slf4j
-//@Sql(scripts = {"classpath:db/insert.sql"})
+@Sql(scripts = {"classpath:db/insert.sql"})
 class AddressRepositoryTest {
 
     @Autowired
@@ -72,6 +72,5 @@ class AddressRepositoryTest {
 
         assertThat(addressRepository.existsById(4)).isFalse();
     }
-
 
 }

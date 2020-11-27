@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Slf4j
-//@Sql(scripts = {"classpath:db/insert.sql"})
+@Sql(scripts = {"classpath:db/insert.sql"})
 class CustomerRepositoryTest {
 
     @Autowired
@@ -139,5 +139,7 @@ class CustomerRepositoryTest {
 
         assertThat(customer1.getAddressList()).contains(address);
     }
+
+
 
 }

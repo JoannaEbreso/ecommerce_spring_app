@@ -15,11 +15,11 @@ public class OrderModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String orderDate;
+    private Date orderDate;
 
-    private String deliveryDate;
+    private Date deliveryDate;
 
-
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
     @OneToMany
